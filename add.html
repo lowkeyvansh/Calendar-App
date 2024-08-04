@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Add Event</h1>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <main>
+        <section id="add-event">
+            <h2>Add a New Event</h2>
+            <form action="{{ url_for('add') }}" method="POST">
+                <label for="title">Event Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <button type="submit">Add Event</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Calendar App</p>
+    </footer>
+</body>
+</html>
